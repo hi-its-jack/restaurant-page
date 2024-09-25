@@ -1,18 +1,13 @@
-import sourdough from './assets/images/sourdough.jpg';
-import menu from './menu';
+import home from './home';
 import contact from './contact';
+import sourdough from './assets/images/sourdough.jpg';
 
-function home() {
+function menu() {
     const content = document.querySelector("#content");
-    if (!content) {
-        console.error('Element with id "content" not found');
-        return;
-    }
-
-    content.textContent = ""; // Clear previous content
+    content.textContent = "";
 
     const header = document.createElement("h1");
-    header.textContent = "Dough Boys";
+    header.textContent = "Menu";
     content.appendChild(header);
 
     const image = document.createElement("img");
@@ -21,7 +16,7 @@ function home() {
     content.appendChild(image);
 
     const welcome = document.createElement("p");
-    welcome.textContent = "The Freshest Sourdough on the Market!";
+    welcome.textContent = "All we do is sourdough, You'll eat it and you'll like it!";
     content.appendChild(welcome);
 
     const nav = document.createElement("nav");
@@ -30,6 +25,7 @@ function home() {
     const homeBtn = document.createElement("button");
     homeBtn.textContent = "Home";
     nav.appendChild(homeBtn);
+    homeBtn.addEventListener("click", home);
 
     const menuBtn = document.createElement("button");
     menuBtn.textContent = "Menu";
@@ -42,4 +38,4 @@ function home() {
     contactBtn.addEventListener("click", contact);
 }
 
-export default home;
+export default menu;

@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [ // Add plugins here
     new HtmlWebpackPlugin({
-      title: 'Production',
+      title: 'development',
       template: './src/index.html', // This line should point to your source HTML file
     }),
   ],
